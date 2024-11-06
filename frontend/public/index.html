@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Search</title>
+    <link rel="stylesheet" href="style.css"> <!-- Optional, for custom styles -->
+</head>
+<body>
+
+    <h1>Car Search</h1>
+
+    <!-- Form to enter search parameters -->
+    <div>
+        <label for="make">Make:</label>
+        <input type="text" id="make" placeholder="Enter car make">
+
+        <label for="model">Model:</label>
+        <input type="text" id="model" placeholder="Enter car model">
+
+        <label for="year">Year:</label>
+        <input type="number" id="year" placeholder="Enter car year">
+
+        <label for="cylinders">Cylinders:</label>
+        <input type="number" id="cylinders" placeholder="Enter car cylinders">
+
+        <button id="fetchButton">Search</button>
+    </div>
+
+    <!-- Displaying results -->
+    <h2>Car Results:</h2>
+    <ul id="carResults"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>

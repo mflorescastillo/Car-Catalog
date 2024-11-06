@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Montse1998
+      - POSTGRES_DB=finance_tracker
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  flask:
+    build: ./backend
+    ports:
+      - "5000:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:Montse1998@postgres/finance_tracker
+    depends_on:
+      - postgres
+
+  react:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+volumes:
+  postgres_data:
